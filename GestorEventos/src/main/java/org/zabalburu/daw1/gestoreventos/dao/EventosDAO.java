@@ -15,8 +15,11 @@ import org.zabalburu.daw1.gestoreventos.modelo.Persona;
 public interface EventosDAO {
     
     void nuevoEvento(Evento nuevo);
-    Evento getEvento(int codigo);
-    void eliminarEvento(int codigo);
-    List<Persona> getPersona();
+    Evento getEvento(int idEvento);
+    void eliminarEvento(int idEvento); 
+    List<Evento> getEventos();
+    void apuntarPersonaAEvento(int idEvento, Persona persona);
+    void desapuntarPersonaDeEvento(int idEvento, int idPersona);
+    List<Persona> getPersonasEvento(int idEvento);
     
 }

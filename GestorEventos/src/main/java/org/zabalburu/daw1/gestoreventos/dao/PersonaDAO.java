@@ -12,12 +12,14 @@ import org.zabalburu.daw1.gestoreventos.modelo.Persona;
  *
  * @author belensexpeare
  */
+
+//CRUD
 public interface PersonaDAO {
-     void nuevoPersona(Persona nuevo);
-    Persona getPersona(int codigo);
-    void eliminarPersona(int codigo);
-    List<Persona> getPersona();
-    void nuevoEvento(int idEvento, Evento nuevo);
-    void eliminarEvento(int idEvento, int num);
+    void nuevoPersona(Persona nuevo); 
+    Persona getPersona(int id); 
+    void eliminarPersona(int id); 
+    List<Evento> getEventosPersona(int id); 
+    void apuntarEvento(int id, Evento evento); 
+    void desapuntarEvento(int id, int idEvento); 
     
 }
