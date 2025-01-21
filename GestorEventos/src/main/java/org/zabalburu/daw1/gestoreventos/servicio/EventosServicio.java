@@ -26,8 +26,8 @@ public class EventosServicio {
         dao.eliminarEvento(idEvento);
     }
 
-    public void apuntarPersonaAEvento(int id, int idEvento){
-        dao.apuntarPersonaAEvento(id, idEvento);
+    public void apuntarPersonaAEvento(int idEvento, Persona persona){
+        dao.apuntarPersonaAEvento(idEvento, persona);
     }
 
     public void desapuntarPersonaDeEvento(int id, int idEvento){
