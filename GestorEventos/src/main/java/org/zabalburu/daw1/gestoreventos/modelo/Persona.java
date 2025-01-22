@@ -33,7 +33,6 @@ public class Persona {
 
     public Persona(int id, String dni, String nombre, String apellidos, Date fechaNacimiento, String password) {
         this();
-        this.id = id;
         this.dni = dni;
         this.nombre = nombre;
         this.apellidos = apellidos;
