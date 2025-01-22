@@ -38,7 +38,7 @@ public class EventosList implements EventosDAO {
         }
     }
 
-
+/*
     @Override
     public List<Evento> getEventos() {
         return new ArrayList<>(eventos);
@@ -53,11 +53,11 @@ public class EventosList implements EventosDAO {
     }
 
     @Override
-    public void desapuntarPersonaDeEvento(int idEvento, int idPersona) {
+    public void desapuntarPersonaDeEvento(int idEvento, int id) {
         Evento evento = getEvento(idEvento);
         if (evento != null) {            
             for (int i = 0; i < evento.getPersonas().size(); i++) {
-                if (evento.getPersonas().get(i).getId() == idPersona) {
+                if (evento.getPersonas().get(i).getId() == id) {
                     evento.getPersonas().remove(i);
                     break;
                 }
@@ -73,4 +73,5 @@ public class EventosList implements EventosDAO {
             }
             return new ArrayList<>();
         }
+        */
     }

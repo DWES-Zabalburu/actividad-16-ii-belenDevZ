@@ -61,8 +61,6 @@ public class Persona {
     }
 
 
-    
-
     public static int getNumIds() {
         return numIds;
     }
