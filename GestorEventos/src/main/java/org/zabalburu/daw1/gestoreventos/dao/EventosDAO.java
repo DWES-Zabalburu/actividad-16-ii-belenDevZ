@@ -14,13 +14,16 @@ import org.zabalburu.daw1.gestoreventos.modelo.Persona;
  */
 public interface EventosDAO {
     
+    //GESTION CON MATRICES
+    
         /* 
         deberiamos poder:
             añadir evento
             eliminar evento
             modificar evento
             buscar evento por ID
-            buscar evento por nombre*/
+            buscar evento por nombre
+        */
     
     void nuevoEvento(Evento nuevo);
     Evento getEvento(int idEvento);

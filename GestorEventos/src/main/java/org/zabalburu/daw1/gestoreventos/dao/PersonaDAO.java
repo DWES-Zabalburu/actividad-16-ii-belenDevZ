@@ -15,7 +15,7 @@ import org.zabalburu.daw1.gestoreventos.modelo.Persona;
 
 //CRUD
 public interface PersonaDAO {
-    
+    //GESTION CON MATRICES
     /* 
         deberiamos poder:
             añadir persona
@@ -26,9 +26,10 @@ public interface PersonaDAO {
     
     lo ideal seria hacer una expresion regular para comprobar 
     el DNI pero seria complicado*/
-    void nuevoPersona(Persona nuevo); 
-    Persona getPersona(int id); 
+    
+    Persona añadirPersona(Persona nueva);
     void eliminarPersona(int id); 
+    Persona getPersona(int id); 
     List<Evento> getEventosPersona(int id); 
     void apuntarEvento(int id, Evento evento); 
     void desapuntarEvento(int id, int idEvento); 
