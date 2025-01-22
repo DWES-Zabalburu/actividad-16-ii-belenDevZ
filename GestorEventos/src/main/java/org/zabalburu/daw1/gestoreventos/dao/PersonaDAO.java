@@ -15,6 +15,17 @@ import org.zabalburu.daw1.gestoreventos.modelo.Persona;
 
 //CRUD
 public interface PersonaDAO {
+    
+    /* 
+        deberiamos poder:
+            añadir persona
+            eliminar persona
+            modificar persona
+            buscar persona por ID
+            buscar persona por DNI
+    
+    lo ideal seria hacer una expresion regular para comprobar 
+    el DNI pero seria complicado*/
     void nuevoPersona(Persona nuevo); 
     Persona getPersona(int id); 
     void eliminarPersona(int id); 

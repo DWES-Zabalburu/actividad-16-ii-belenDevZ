@@ -7,6 +7,8 @@ import org.zabalburu.daw1.gestoreventos.modelo.Evento;
 import org.zabalburu.daw1.gestoreventos.modelo.Persona;
 
 public class EventosServicio {
+    
+    
 
     private EventosDAO dao = new EventosList();
     
