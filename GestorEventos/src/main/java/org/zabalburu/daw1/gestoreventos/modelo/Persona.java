@@ -5,7 +5,9 @@
 package org.zabalburu.daw1.gestoreventos.modelo;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 /**
@@ -102,8 +104,21 @@ public class Persona {
     }
     
         public Boolean getEsMayor18() {
-        return esMayor18;
-    }
+        GregorianCalendar gcHoy = new GregorianCalendar();
+        GregorianCalendar gcFechaNacimiento = new GregorianCalendar();
+        gcFechaNacimiento.setTime(this.fechaNacimiento);
+        int añoActual = gcHoy.get(Calendar.YEAR);
+        int añoNacimiento = gcFechaNacimiento.get(Calendar.YEAR);
+        int edad = añoActual - añoNacimiento;
+        
+        //si no ha cumplido el dia actual será MENOR respecto al dia de su nacimiento( se resta un año)
+        
+        if(gcHoy.get(Calendar.DAY_OF_YEAR)< gcFechaNacimiento.get(Calendar.DAY_OF_YEAR)){
+            edad--;
+            }
+            return edad>=18;
+        }
+    
 
     public void setEsMayor18(Boolean esMayor18) {
         this.esMayor18 = esMayor18;
