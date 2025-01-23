@@ -28,9 +28,12 @@ public interface PersonaDAO {
     el DNI pero seria complicado*/
     
     Persona añadirPersona(Persona nueva);
-    void eliminarPersona(int id); 
-    Persona getPersona(int id); 
-    List<Evento> getEventosPersona(int id); 
+    void eliminarPersona(int id);
+    Persona getPersona(int id);
+    Persona getPersona(String dni);
+    void modificarPersona(Persona modificar);
+    List<Evento> getPersonas();
+    /////
     void apuntarEvento(int id, Evento evento); 
     void desapuntarEvento(int id, int idEvento); 
     

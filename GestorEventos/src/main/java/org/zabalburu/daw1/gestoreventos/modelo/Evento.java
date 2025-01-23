@@ -13,7 +13,7 @@ import java.util.List;
  * @author belenbelenare
  */
 public class Evento {
-        private static int numIdsEventos=1;
+        private static int numIdsEventos=0;
     
     private int idEvento;
     private String descripcion;

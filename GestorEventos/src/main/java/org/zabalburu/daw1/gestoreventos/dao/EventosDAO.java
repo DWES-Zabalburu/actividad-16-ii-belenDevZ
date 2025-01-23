@@ -25,10 +25,12 @@ public interface EventosDAO {
             buscar evento por nombre
         */
     
-    void nuevoEvento(Evento nuevo);
-    Evento getEvento(int idEvento);
+    void añadirEvento(Evento nuevo);
     void eliminarEvento(int idEvento); 
+    void modificarEvento(Evento evento);
     List<Evento> getEventos();
+    Evento getEvento(int idEvento);
+    ////
     void apuntarPersonaAEvento(int idEvento, Persona persona);
     void desapuntarPersonaDeEvento(int idEvento, int idPersona);
     List<Persona> getPersonasEvento(int idEvento);
