@@ -29,12 +29,10 @@ public interface PersonaDAO {
     
     Persona añadirPersona(Persona nueva);
     void eliminarPersona(int id);
-    Persona getPersona(int id);
-    Persona getPersona(String dni);
     void modificarPersona(Persona modificar);
     List<Evento> getPersonas();
-    /////
-    void apuntarEvento(int id, Evento evento); 
-    void desapuntarEvento(int id, int idEvento); 
-    
+    Persona getPersona(int id);
+    Persona getPersona(String dni);
+
+   
 }
