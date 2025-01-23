@@ -4,6 +4,7 @@ import java.util.List;
 import org.zabalburu.daw1.gestoreventos.dao.EventosDAO;
 import org.zabalburu.daw1.gestoreventos.dao.EventosList;
 import org.zabalburu.daw1.gestoreventos.dao.PersonaDAO;
+import org.zabalburu.daw1.gestoreventos.dao.PersonaMatriz;
 import org.zabalburu.daw1.gestoreventos.modelo.Evento;
 
 public class EventosServicio {
@@ -11,7 +12,7 @@ public class EventosServicio {
     
 
     private EventosDAO dao = new EventosList();
-    private PersonaDAO dao = new EventosMatriz();
+    private PersonaDAO dao = new PersonaMatriz();
     
     public void añadirEvento(Evento nuevo){
         dao.añadirEvento(nuevo);

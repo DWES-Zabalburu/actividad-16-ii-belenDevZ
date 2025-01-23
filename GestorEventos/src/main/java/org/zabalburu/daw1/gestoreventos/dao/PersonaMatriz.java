@@ -18,7 +18,7 @@ public class PersonaMatriz implements PersonaDAO{
 
     private static Persona[] personas = new Persona[100];
     private static int numPersonas = 0;
-    
+    /* se podria calcular automaticamente la edad y que en la propia matriz saliera true o false??*/
     public PersonaMatriz(){
         nuevaPersona(new Persona(0, "11111111A","Juan", "López",new GregorianCalendar(2000, 10, 24).getTime(), true));
         nuevaPersona(new Persona(0, "22222222B","Ekaitz", "LLanos",new GregorianCalendar(2008, 11, 14).getTime(),false));
@@ -32,9 +32,9 @@ public class PersonaMatriz implements PersonaDAO{
         nuevoGasto(1, new Gasto("Transporte", new GregorianCalendar(2024, 10, 23).getTime(), 10.5));
         nuevoGasto(3, new Gasto("Comida", new GregorianCalendar(2024, 11, 4).getTime(), 50));
     }
-        Persona añadirPersona(Persona nueva);
+/*        Persona añadirPersona(Persona nueva);
     void eliminarPersona(int id); 
     void modificarPersona(int id);
     Persona buscarPersona(int id);
-    Persona buscarPersona(String dni);
+    Persona buscarPersona(String dni); */
 }
