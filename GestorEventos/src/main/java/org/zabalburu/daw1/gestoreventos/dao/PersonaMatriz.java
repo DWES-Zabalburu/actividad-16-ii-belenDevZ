@@ -5,7 +5,6 @@
 package org.zabalburu.daw1.gestoreventos.dao;
 
 import java.util.GregorianCalendar;
-import org.zabalburu.daw1.gestoreventos.modelo.Evento;
 import org.zabalburu.daw1.gestoreventos.modelo.Persona;
 
 /**
@@ -42,9 +41,9 @@ public class PersonaMatriz implements PersonaDAO{
     public void eliminarPersona(int id){
     //buscar la posicion de al persona con el id recibido
     //busqueda desordenada!!!!!!!!
-    int i;
-    for(i=0; i<numPersonas && id!=personas[i].getId();i++);
-    if (i<numPersonas){
+    int i = getPersonaById(id);
+    
+    if (i!=-1){
         //mover los elementos desde i+1 desde una posicion a la izq
         for(i=+1; i<numPersonas; i++){
             personas[i-1] =personas[i];
@@ -52,6 +51,28 @@ public class PersonaMatriz implements PersonaDAO{
         //tenemos unas persona menos
         numPersonas--;
     }
+    
+    @Override
+    public void modificarPersona(Persona modificar){
+        //buscamos la posicion de la persona con ese id
+        int pos = getPersonaById(modificar.getId());
+        if (pos !=-1){
+            personas[pos]=modificar;
+        }
+    }
+    
+    
+    
+    //voy a haceer un metodobuscar para reciclar el metodo eliminar persona
+    private int getPersonaById(int id){
+    int i;
+    for(i=0; i<numPersonas && id!=personas[i].getId();i++);
+        if (i<numPersonas){
+            return i;
+        }else {
+            return -1;
+        }
+    } 
     
     
     /*Persona añadirPersona(Persona nueva);
